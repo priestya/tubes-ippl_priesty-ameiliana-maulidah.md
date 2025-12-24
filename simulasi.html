@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h1>Simulasi Energi</h1>
+    <p>Kalkulator panel surya</p>
+  </div>
+
+  <div class="card">
+    <input type="number" id="panel" placeholder="Jumlah Panel Surya">
+    <button onclick="hitung()">Hitung Simulasi</button>
+    <p id="hasil" style="margin-top:12px;font-weight:600;"></p>
+  </div>
+
+</div>
+
+<div class="nav">
+  <a href="home.html">Beranda</a>
+  <a href="materi.html">Materi</a>
+  <a class="active" href="simulasi.html">Simulasi</a>
+  <a href="profile.html">Profil</a>
+</div>
+
+<script>
+function hitung(){
+  let panel = document.getElementById("panel").value;
+  document.getElementById("hasil").innerHTML =
+    "Estimasi Energi: " + (panel * 15) + " kWh/bulan";
+}
+</script>
+
+</body>
+</html>
